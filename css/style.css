@@ -131,6 +131,10 @@ body {
   width: 100%;
 }
 
+.picture-form {
+  border: none;
+}
+
 .form-field-button {
   display: flex;
   justify-content: center;
