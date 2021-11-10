@@ -17,7 +17,7 @@
   <body>
     <div class="wrapper">
       <div class="form-wrapper">
-        <form action="#" class="form-field" onSubmit="event.preventDefault()"">
+        <form action="#" class="form-field" onSubmit="event.preventDefault()">
           <div class="form-heading-box">
             <h1 class="form-heading">Data Diri</h1>
             <hr />
@@ -58,14 +58,26 @@
               <div class="form-group">
                 <label class="form-data-label">Jenis Kelamin</label>
                 <div class="form-group-radio">
-                  <input type="radio" class="form-data-radio" id="laki-laki" name="gender" value="laki-laki"/>
+                  <input
+                    type="radio"
+                    class="form-data-radio"
+                    id="laki-laki"
+                    name="gender"
+                    value="laki-laki"
+                  />
                   <label for="laki-laki" class="form-data-label__radio">
                     <span class="form-radio-button"></span>
                     Laki-laki
                   </label>
                 </div>
                 <div class="form-group-radio">
-                  <input type="radio" class="form-data-radio" id="perempuan" name="gender" value="perempuan"/>
+                  <input
+                    type="radio"
+                    class="form-data-radio"
+                    id="perempuan"
+                    name="gender"
+                    value="perempuan"
+                  />
                   <label for="perempuan" class="form-data-label__radio">
                     <span class="form-radio-button"></span>
                     Perempuan
@@ -96,13 +108,18 @@
               </div>
             </div>
             <div class="form-group-box">
-              <div class="form-group ">
+              <div class="form-group">
                 <label class="form-data-label">Alamat</label>
                 <input type="text" class="form-data-input" id="address" />
               </div>
-              <div class="form-group ">
+              <div class="form-group">
                 <label class="form-data-label">Upload Picture</label>
-                <input type="file" class="form-data-input picture-form" id="avatar" onchange="showPreview(event)" />
+                <input
+                  type="file"
+                  class="form-data-input picture-form"
+                  id="avatar"
+                  onchange="showPreview(event)"
+                />
               </div>
             </div>
           </div>
@@ -117,7 +134,7 @@
       <div class="card">
         <div class="card__left">
           <div class="card__left-img-box">
-            <img  alt="avatar" class="card__left-img" id="previewAvatar"/>
+            <img alt="avatar" class="card__left-img" id="previewAvatar" />
           </div>
         </div>
         <div class="card__right">
@@ -130,7 +147,7 @@
           <div class="card__right-detail-box">
             <div class="card__right-detail">
               <div class="card__right-detail-group">
-                <p class="card__right-detail-label" >Tanggal Lahir</p>
+                <p class="card__right-detail-label">Tanggal Lahir</p>
                 <p class="card__right-detail-data" id="previewBirthdate"></p>
               </div>
               <div class="card__right-detail-group">
