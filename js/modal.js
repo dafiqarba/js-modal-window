@@ -74,6 +74,15 @@ function previewData() {
   let instagramInput = document.getElementById("instagram").value;
   let instagramCard = document.getElementById("previewInstagram");
   instagramCard.setAttribute("href", "https://instagram.com/" + instagramInput);
+
+  let avatarInput = document.getElementById("avatar").value;
+  let avatarCard = document.getElementById("previewAvatar");
+  avatarCard.setAttribute("src", "img/" + avatarInput.split("\\").pop());
+
+  /* document.getElementById("avatar").onchange = function () {
+    let imgsrc = URL.createObjectURL(this.files[0]);
+    document.getElementById("previewAvatar").setAttribute("src", imgsrc);
+  }; */
 }
 
 let modalWindow = document.getElementById("modal-wrapper");
