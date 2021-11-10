@@ -3,7 +3,6 @@ function showPreview(event) {
   if (event.target.files.length > 0) {
     let src = URL.createObjectURL(event.target.files[0]);
     let preview = document.getElementById("previewAvatar");
-    console.log(preview);
     preview.src = src;
   }
 }
@@ -58,15 +57,12 @@ function previewData() {
   let phoneCard = document.getElementById("previewPhone");
   phoneCard.innerHTML = phoneInput;
 
-  let genderInput1 = document.getElementById("laki-laki").value;
-  if (genderInput1 == "laki-laki") {
-    let genderCard = document.getElementById("previewGender");
-    genderCard.innerHTML = "Laki-laki";
-  }
+  let genderInput1 = document.getElementById("laki-laki");
+  let genderCard = document.getElementById("previewGender");
 
-  let genderInput2 = document.getElementById("perempuan").value;
-  if (genderInput2 == "perempuan") {
-    let genderCard = document.getElementById("previewGender");
+  if (genderInput1.checked) {
+    genderCard.innerHTML = "Laki-laki";
+  } else {
     genderCard.innerHTML = "Perempuan";
   }
 
