@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Profile Card</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-wrapper">
+        <form action="#" class="form-field" onSubmit="event.preventDefault()"">
+          <div class="form-heading-box">
+            <h1 class="form-heading">Data Diri</h1>
+            <hr />
+          </div>
+          <div class="form-field-box">
+            <div class="form-group-box">
+              <div class="form-group">
+                <label class="form-data-label">Nama Lengkap</label>
+                <input type="text" class="form-data-input" id="name" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-data-label">Tanggal lahir</label>
+                <input type="date" class="form-data-input" id="birthdate" />
+              </div>
+            </div>
+            <div class="form-group-box">
+              <div class="form-group">
+                <label class="form-data-label">Pendidikan</label>
+                <input type="text" class="form-data-input" id="education" />
+              </div>
+              <div class="form-group">
+                <label class="form-data-label">Keahlian</label>
+                <input type="text" class="form-data-input" id="skills" />
+              </div>
+            </div>
+            <div class="form-group-box">
+              <div class="form-group">
+                <label class="form-data-label">Email</label>
+                <input type="text" class="form-data-input" id="email" />
+              </div>
+              <div class="form-group">
+                <label class="form-data-label">No HP</label>
+                <input type="text" class="form-data-input" id="phone" />
+              </div>
+            </div>
+            <div class="form-group-box">
+              <div class="form-group">
+                <label class="form-data-label">Jenis Kelamin</label>
+                <div class="form-group-radio">
+                  <input type="radio" class="form-data-radio" id="laki-laki" name="gender" value="laki-laki"/>
+                  <label for="laki-laki" class="form-data-label__radio">
+                    <span class="form-radio-button"></span>
+                    Laki-laki
+                  </label>
+                </div>
+                <div class="form-group-radio">
+                  <input type="radio" class="form-data-radio" id="perempuan" name="gender" value="perempuan"/>
+                  <label for="perempuan" class="form-data-label__radio">
+                    <span class="form-radio-button"></span>
+                    Perempuan
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-data-label">Agama</label>
+                <div class="form-select__group">
+                  <select name="agama" id="religion" class="form-select">
+                    <option value="islam">Islam</option>
+                    <option value="kristen">Kristen</option>
+                    <option value="katolik">Katolik</option>
+                    <option value="hindu">Hindu</option>
+                    <option value="buddha">Buddha</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group-box">
+              <div class="form-group">
+                <label class="form-data-label">Github</label>
+                <input type="text" class="form-data-input" id="github" />
+              </div>
+              <div class="form-group">
+                <label class="form-data-label">Instagram</label>
+                <input type="text" class="form-data-input" id="instagram" />
+              </div>
+            </div>
+            <div class="form-group-box">
+              <div class="form-group merge">
+                <label class="form-data-label">Alamat</label>
+                <input type="text" class="form-data-input" id="address" />
+              </div>
+              
+            </div>
+          </div>
+          <div class="form-field-button">
+            <button class="button" id="button">Preview Data</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- modal -->
+    <div class="modal-wrapper" id="modal-wrapper">
+      <div class="card">
+        <div class="card__left">
+          <div class="card__left-img-box">
+            <img src="img/avatar.svg" alt="avatar" class="card__left-img" />
+          </div>
+        </div>
+        <div class="card__right">
+          <div class="card__right-id-box">
+            <h1 class="card__right-id">
+              <span class="card__right-id-name" id="previewName"></span>
+              <span class="card__right-id-batch">Prodemy #7</span>
+            </h1>
+          </div>
+          <div class="card__right-detail-box">
+            <div class="card__right-detail">
+              <div class="card__right-detail-group">
+                <p class="card__right-detail-label" >Tanggal Lahir</p>
+                <p class="card__right-detail-data" id="previewBirthdate"></p>
+              </div>
+              <div class="card__right-detail-group">
+                <p class="card__right-detail-label">Pendidikan</p>
+                <p class="card__right-detail-data" id="previewEducation"></p>
+              </div>
+            </div>
+          </div>
+          <div class="card__right-detail-box">
+            <div class="card__right-detail">
+              <div class="card__right-detail-group">
+                <p class="card__right-detail-label">Jenis Kelamin</p>
+                <p class="card__right-detail-data" id="previewGender"></p>
+              </div>
+              <div class="card__right-detail-group">
+                <p class="card__right-detail-label">Agama</p>
+                <p class="card__right-detail-data" id="previewReligion"></p>
+              </div>
+            </div>
+          </div>
+          <div class="card__right-detail-box">
+            <div class="card__right-detail">
+              <div class="card__right-detail-group">
+                <p class="card__right-detail-label">Email</p>
+                <p class="card__right-detail-data" id="previewEmail"></p>
+              </div>
+              <div class="card__right-detail-group">
+                <p class="card__right-detail-label">No HP</p>
+                <p class="card__right-detail-data" id="previewPhone"></p>
+              </div>
+            </div>
+          </div>
+          <div class="card__right-detail-box">
+            <div class="card__right-detail">
+              <div class="card__right-detail-group">
+                <p class="card__right-detail-label">Keahlian</p>
+                <p class="card__right-detail-data" id="previewSkills"></p>
+              </div>
+              <div class="card__right-detail-group">
+                <p class="card__right-detail-label">Alamat</p>
+                <p class="card__right-detail-data" id="previewAddress"></p>
+              </div>
+            </div>
+          </div>
+          <div class="card__right-social">
+            <div class="card__right-social-box">
+              <a href="https://github.com/dafiqarba" id="previewGithub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div class="card__right-social-box">
+              <a href="https://instagram.com/dafiqarba" id="previewInstagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
+  </body>
+</html>
