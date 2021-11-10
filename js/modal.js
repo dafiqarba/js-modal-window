@@ -1,13 +1,38 @@
+// Image Previewer
+function showPreview(event) {
+  if (event.target.files.length > 0) {
+    let src = URL.createObjectURL(event.target.files[0]);
+    let preview = document.getElementById("previewAvatar");
+    console.log(preview);
+    preview.src = src;
+  }
+}
+
+// Check if it's not null, fully loaded
 let openModalTrigger = document.getElementById("button");
+if (openModalTrigger) {
+  openModalTrigger.addEventListener("click", openModal);
+}
 
-openModalTrigger.addEventListener("click", openModal);
-
+// Open modal window and show preview data
 function openModal() {
   document.getElementById("modal-wrapper").classList.add("visible");
 
   previewData();
 }
 
+// Check if modal window opened and active
+let modalWindow = document.getElementById("modal-wrapper");
+if (modalWindow) {
+  modalWindow.addEventListener("click", closeModal);
+}
+
+// Close modal window
+function closeModal() {
+  modalWindow.classList.remove("visible");
+}
+
+// Data Acquisition for Preview
 function previewData() {
   let nameInput = document.getElementById("name").value;
   let nameCard = document.getElementById("previewName");
@@ -75,19 +100,9 @@ function previewData() {
   let instagramCard = document.getElementById("previewInstagram");
   instagramCard.setAttribute("href", "https://instagram.com/" + instagramInput);
 
-  let avatarInput = document.getElementById("avatar").value;
+  // Fixed
+  /* let avatarInput = document.getElementById("avatar").value;
   let avatarCard = document.getElementById("previewAvatar");
   avatarCard.setAttribute("src", "img/" + avatarInput.split("\\").pop());
-
-  /* document.getElementById("avatar").onchange = function () {
-    let imgsrc = URL.createObjectURL(this.files[0]);
-    document.getElementById("previewAvatar").setAttribute("src", imgsrc);
-  }; */
-}
-
-let modalWindow = document.getElementById("modal-wrapper");
-modalWindow.addEventListener("click", closeModal);
-
-function closeModal() {
-  modalWindow.classList.remove("visible");
+ */
 }
