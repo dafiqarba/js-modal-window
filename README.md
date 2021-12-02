@@ -1,4 +1,4 @@
-# modalWindowJS
+# js-modal-window
 A modal window to preview the data that has been entered into the provided form
 
 ## Tugas Prodemy #7 - JS
